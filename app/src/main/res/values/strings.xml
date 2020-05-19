@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Project</string>
+    <string name="app_name">Fall Detection</string>
+    <string name="string1">Settings</string>
+    <string name="string2">About</string>
+    <string name="string3">History</string>
+    <string name="string4">Emergency Contacts</string>
+
+
 </resources>
