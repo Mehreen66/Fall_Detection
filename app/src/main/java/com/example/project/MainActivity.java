@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         mToggle.syncState();
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        /*
+        String[] temp_data = new String[0];     //just dummy data instead of sensor data
+        RecyclerView historyList = (RecyclerView)findViewById(R.id.historyList);
+        historyList.setLayoutManager(new LinearLayoutManager(this));
+        historyList.setAdapter(new MyAdapter(temp_data));*/
         //TextView tv=findViewById(R.id.item1);
     }
 
@@ -38,8 +45,16 @@ public class MainActivity extends AppCompatActivity {
 
         if(mToggle.onOptionsItemSelected(item))
         {
+            int id=item.getItemId();
+            if(id==R.id.item2)
+            {
+                Intent intent =new Intent (MainActivity.this,Settings.class);
+                startActivity(intent);
+                return true;
+            }
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
     /*
