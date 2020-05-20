@@ -4,6 +4,8 @@
     <string name="string2">About</string>
     <string name="string3">History</string>
     <string name="string4">Emergency Contacts</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 
 </resources>
